@@ -8,16 +8,15 @@ package StarbuzzCoffe;
  *
  * @author oscar
  */
-public abstract class Beverage {
-     String descripcion;
+public class HouseBlend extends Beverage{
 
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public HouseBlend() {
+        descripcion= "HouseBlend";
     }
     
-    public abstract float costo();
+    @Override
+    public float costo() {
+        return 38.00f;
+    }
+    
 }
