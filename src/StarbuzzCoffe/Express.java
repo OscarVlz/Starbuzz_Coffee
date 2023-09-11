@@ -8,6 +8,14 @@ package StarbuzzCoffe;
  *
  * @author oscar
  */
-public class Express {
-    
+public class Express extends Beverage{
+    public Express(){
+        descripcion="Express";
+        
+    }
+
+    @Override
+    public float costo() {
+        return 36.00f;
+    }
 }

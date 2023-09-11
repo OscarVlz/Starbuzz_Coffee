@@ -8,6 +8,22 @@ package StarbuzzCoffe;
  *
  * @author oscar
  */
-public class Milk {
+public class Milk extends CondimentoDecorador {
+
+    public Milk(Beverage beverage) {
+        this.beverage=beverage;
+    }
+
     
+    @Override
+    public String getDescripcion() {
+        return beverage.getDescripcion() + " + Milk";
+    }
+
+    @Override
+    public float costo() {
+        float costo = beverage.costo();
+        return costo += 3.49f;
+    }
+
 }
